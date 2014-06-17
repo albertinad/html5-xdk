@@ -83,9 +83,9 @@ $.ui.ready(function() {
     
     $('#stadium-detail').bind('loadpanel', function(evt) {
         //url would be #stadium-detail/1
-        var url=document.location.hash.replace("#" + evt.target.id + "/","");
-        var params=url.split("/");
-        var id = params[0] | 0;        
+        var url = document.location.hash;
+        var params = url.split("/");
+        var id = params[1] | 0;        
         var stadium = stadiums.getById(id);
         
         populateStadiumDetail(stadium);

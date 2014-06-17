@@ -5,13 +5,21 @@
       "type": "Blank Project",
       "src": "blankProject",
       "projectGuid": "76c98db4-5e6e-4e56-a886-7ee926a59b82",
-      "lastModifiedDate": 1402928896104,
+      "lastModifiedDate": 1403025128706,
       "creationDate": 1402928896066
     },
     "sourceDirectory": "www",
     "startFile": "index.html",
     "projectFiles": {},
-    "projectDirectories": {},
+    "projectDirectories": {
+      "xdk/services/iodocs": {
+        "settings": {
+          "project": {
+            "XDK-generated": "true"
+          }
+        }
+      }
+    },
     "libraries": [
       {
         "name": "Cordova",
