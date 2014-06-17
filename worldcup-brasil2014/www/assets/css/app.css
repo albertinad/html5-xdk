@@ -1,0 +1,151 @@
+/* Prevent copy paste for all elements except text fields */
+* { 
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+}
+
+input, 
+textarea {
+    -webkit-user-select: text;
+}
+
+/* utils */
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* home */
+
+.home-image {
+    height: 75%;
+    width: 100%;
+}
+
+.home-image .fifa-logo {
+    content: url(../img/logo.png);
+    height: 100%;
+    text-align: center;
+}
+
+.navigation-container {
+    width: 100%;
+    height: auto;
+}
+
+.navigation-container .navigation-option {
+    width: 50%;
+    padding: 5px;
+    float: left;
+}
+
+.navigation-container .navigation-option a {
+    width: 100%;
+}
+
+/* stadiums map */
+
+.stadiums-map {
+    width: 100%;
+    height: 100%;
+}
+
+.stadiums-map .leaflet-popup-content {
+    color: #000000;
+}
+
+.stadium-image {
+    width: 100%;
+    padding: 5px;
+}
+
+.stadium-image img {
+    width: 100%;
+}
+
+/* teams */
+
+.teams li {
+    font-size: 18px;
+}
+
+.teams li img {
+    margin-right: 5px;
+}
+
+/* songs */
+
+.songs-image {
+    height: 70%;
+    width: 100%;
+}
+
+.songs-image .fifa-logo {
+    content: url(../img/logo2.png);
+    height: 100%;
+    text-align: center;
+}
+
+/* commons */
+
+#afui .fifa-btn,
+#afui.ios .fifa-btn,
+#afui.android .fifa-btn {
+    background-color: #326295;
+    border: 1px solid #05274B;
+    color: #ffffff;
+}
+
+
+#afui .fifa-btn:hover,
+#afui .fifa-btn:active,
+#afui.ios .fifa-btn:hover,
+#afui.ios .fifa-btn:active,
+#afui.android .fifa-btn:hover,
+#afui.android .fifa-btn:active,{
+    background-color: #05274B;
+    border: 1px solid #326295;
+}
+
+#afui .list li,
+#afui.ios .list li,
+#afui.android .list li {
+    border-bottom: 1px solid #ffffff;
+}
+
+#afui header {
+    background-color: #326295;
+    color: #ffffff;
+}
+
+#afui .panel,
+#afui.ios .panel,
+#afui.android .panel {
+    background-color: #ccc;
+    color: #326295;
+}
+
+@media (min-width: 480px), (min-width: 600px) {
+    .home-image {
+        width: 70%;
+        float:left;
+    }
+
+    .home-image .fifa-logo {
+        content: url(../img/logo2.png);
+        text-align: center;
+    }
+
+    .navigation-container {
+        width: 30%;
+        float: right;
+    }
+
+    .navigation-container .navigation-option {
+        width: 100%;
+        padding: 5px;
+        float: left;
+    }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<head>
+	<title>Your New Application</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    
+    <!-- appframework styles -->
+    <link rel="stylesheet" href="libs/appframework/css/icons.min.css">
+    <link rel="stylesheet" href="libs/appframework/css/af.ui.min.css">
+    
+    <!-- leaflet styles -->
+    <link rel="stylesheet" href="libs/leaflet/leaflet.css">
+    
+    <!-- app styles -->
+    <link rel="stylesheet" href="assets/css/app.css">
+        
+    <!-- app framework -->
+    <script type="text/javascript" src="libs/appframework/appframework.min.js"></script>
+    <script type="text/javascript" src="libs/appframework/ui/appframework.ui.min.js"></script>
+	<script type="text/javascript" src="libs/appframework/plugins/af.slidemenu.js"></script>
+    
+    <!-- leaflet -->
+    <script type="text/javascript" src="libs/leaflet/leaflet.js"></script>
+    
+	<script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>     
+    
+    <script src="js/models.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div id="afui">
+        <div id="content">
+            <!-- home panel -->
+            <div id="home" class="panel" data-header="home-header" data-footer="none" selected="true">
+                <header id="home-header">
+                    <h1 id="title">Brasil 2014</h1>
+                    <a id="menubadge" onclick="af.ui.toggleSideMenu()" class="menuButton"></a>
+                </header>
+                
+                <h2 class="center">FIFA World Cup 2014</h2>
+                
+                <div class="home-image center">
+                    <img class="fifa-logo" src=""></img>
+                </div>
+                
+                <div class="navigation-container">
+                    <div class="navigation-option">
+                        <a class="button fifa-btn" href="#teams">Teams</a>
+                    </div>
+                    <div class="navigation-option">
+                        <a class="button fifa-btn" href="#stadiums-list">Stadiums</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- stadiums list panel -->
+            <div id="stadiums-list" class="panel" data-footer="stadiums-footer">
+                <header>
+                    <a class="backButton button">Back</a>
+                    <h1 id="title">Brasil Stadiums</h1>
+                </header>                
+            </div>
+            
+            <!-- stadiums map panel -->
+            <div id="stadiums-map" class="panel" data-footer="stadiums-footer">
+                <header>
+                    <a class="backButton button">Back</a>
+                    <h1 id="title">Brasil Stadiums</h1>                    
+                </header>
+                
+                <div id="map" class="stadiums-map" data-ignore-slide="true"></div>
+            </div>
+        
+            <!-- stadium detail panel -->
+            <div id="stadium-detail" class="panel" data-footer="none">
+                <header>
+                    <a class="backButton button">Back</a>
+                    <h1 id="title"></h1>                    
+                </header>
+                
+                <div class="stadium-image">
+                    <img id="image" src=""></img>
+                </div>
+        
+                <p id="matches"></p>                                
+            </div>
+                    
+            <!-- teams panel -->
+            <div id="teams" class="panel" data-header="teams-header" data-footer="none">
+                <header id="teams-header">
+                    <a class="backButton button">Back</a>
+                    <h1 id="title">Teams</h1>
+                </header>
+                
+                <ul id="teams-list" class="list teams">
+                    <li class="divider">A</li>
+                    <li><img src="assets/img/teams/alg.png"></img>Algeria</li>
+                    <li><img src="assets/img/teams/arg.png"></img>Argentina</li>
+                    <li><img src="assets/img/teams/aus.png"></img>Australia</li>
+                    <li class="divider">B</li>
+                    <li><img src="assets/img/teams/bel.png"></img>Belgium</li>
+                    <li><img src="assets/img/teams/bih.png"></img>Bosnia and Herzegovina</li>
+                    <li><img src="assets/img/teams/bra.png"></img>Brazil</li>
+                    <li class="divider">C</li>
+                    <li><img src="assets/img/teams/cmr.png"></img>Cameroon</li>
+                    <li><img src="assets/img/teams/chi.png"></img>Chile</li>
+                    <li><img src="assets/img/teams/col.png"></img>Colombia</li>
+                    <li><img src="assets/img/teams/crc.png"></img>Costa Rica</li>
+                    <li><img src="assets/img/teams/civ.png"></img>Côte d'Ivoire</li>
+                    <li><img src="assets/img/teams/cro.png"></img>Croatia</li>
+                    <li class="divider">E</li>
+                    <li><img src="assets/img/teams/ecu.png"></img>Ecuador</li>
+                    <li><img src="assets/img/teams/eng.png"></img>England</li>
+                    <li class="divider">F</li>
+                    <li><img src="assets/img/teams/fra.png"></img>France</li>
+                    <li class="divider">G</li>
+                    <li><img src="assets/img/teams/ger.png"></img>Germany</li>
+                    <li><img src="assets/img/teams/gha.png"></img>Ghana</li>
+                    <li><img src="assets/img/teams/gre.png"></img>Greece</li> 
+                    <li class="divider">H</li>
+                    <li><img src="assets/img/teams/hon.png"></img>Honduras</li>
+                    <li class="divider">I</li>
+                    <li><img src="assets/img/teams/irn.png"></img>Iran</li>
+                    <li><img src="assets/img/teams/ita.png"></img>Italy</li>
+                    <li class="divider">J</li>
+                    <li><img src="assets/img/teams/jpn.png"></img>Japan</li>
+                    <li class="divider">K</li>
+                    <li><img src="assets/img/teams/kor.png"></img>Korea Republic</li>
+                    <li class="divider">M</li>
+                    <li><img src="assets/img/teams/mex.png"></img>Mexico</li>
+                    <li class="divider">N</li>
+                    <li><img src="assets/img/teams/ned.png"></img>Netherlands</li>
+                    <li><img src="assets/img/teams/nga.png"></img>Nigeria</li>
+                    <li class="divider">P</li>
+                    <li><img src="assets/img/teams/por.png"></img>Portugal</li>
+                    <li class="divider">R</li>
+                    <li><img src="assets/img/teams/rus.png"></img>Russia</li>
+                    <li class="divider">S</li>
+                    <li><img src="assets/img/teams/esp.png"></img>Spain</li>
+                    <li><img src="assets/img/teams/sui.png"></img>Switzerland</li>
+                    <li class="divider">U</li>
+                    <li><img src="assets/img/teams/uru.png"></img>Uruguay</li>
+                    <li><img src="assets/img/teams/usa.png"></img>USA</li>
+                </ul>                
+            </div>
+        </div> 
+                 
+        <nav id="side-menu">            
+            <ul class="list">
+                <li class="divider" class="icon home">Home</li>
+                <li>
+                    <a href="#home" class='icon home'>Home</a>
+                </li>
+                <li>
+                    <a href="#stadiums-map" class='icon home'>Stadiums</a>
+                </li>
+                <li>
+                    <a href="#teams" class='icon home'>Teams</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <footer id="stadiums-footer">
+            <a class="icon info" data-transition="fade" href="#stadiums-list">List</a>
+            <a class="icon info" data-transition="fade" href="#stadiums-map">Map</a>
+        </footer>
+    </div>
+</body>
+</html>
